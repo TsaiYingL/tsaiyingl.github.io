@@ -6,8 +6,8 @@
 body{
   font-family: "Verdana", Sans-serif;
   text-align:center;
-  color:#002E5F;
-  background-color:#E6F4F1;
+  color:#40798C;
+  background-color:#EEF0F2;
 }
 
 header{
@@ -15,8 +15,8 @@ header{
   padding: 40px;
   font-size:30px;
   letter-spacing:2px;
-  color:#E99B27;
-  background-color: #002E5F;
+  color:#261C15;
+  background-color: #40798C;
 }
 
 main{
@@ -28,45 +28,66 @@ ul {
   list-style-type: none;
   overflow: hidden;
   padding: 6px;
-  background-color:#9CADBC;
-}
-
-li{
-  display: inline;
+  background-color:#C6C7C4;
 }
 
 li a{
   text-decoration: none;
   font-size: 20px;
   padding: 6px 10px;
-  color:#002E5F;
+  color:#6396BA;
 }
 
 li a:hover{
-  background-color: #6396BA;
+  background-color: #002E5F;
 }
 
 h1{
-  color: #E99B27;
+  color: #261C15;
+}
+
+h2 {
+  text-decoration: underline; 
 }
 
 p{
   font-size:20px;
   padding: 10px 0px 50px;
-  color:#316860;
+  color:#40798C;
+}
+
+.navBar {
+  display: inline;
+}
+
+.skills {
+  display: flex;
+}
+
+.skills > div {
+  width: 50%;
+}
+
+.schoolInfo {
+  background-color: #EEF0F2;
 }
 
 .portfolioImg{
   border-radius:5px;
   margin: 10px;
-  border: 3px dotted #E99B27;
+  border: 3px dotted #261C15;
   max-width: 30%;
+}
+
+.pdf {
+  width: 80%;
+  aspect-ratio: 4 / 3;
 }
 
 #homeImg {
   border-radius:5px;
   margin: 10px;
-  border: 3px dotted #40C08C;
+  border: 3px dotted #40798C;
 }
 
 #homeIntro{
