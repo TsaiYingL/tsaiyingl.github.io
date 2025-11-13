@@ -1,40 +1,112 @@
 <!DOCTYPE html>
 <html>
-  <link rel="stylesheet" href="/style.css"/>
-  
-  <head>
+<link rel="stylesheet" href="/style.css" />
+
+<head>
     <title>Tsai's portfolio</title>
-  </head>
-  
-  <body>
+</head>
+
+<body>
     <header>
-      <h1>Protfolio</h1>
+        <h1>Protfolio</h1>
     </header>
-
     <nav>
-      <ul>
-        <li class = "navBar"><a href="index.html">Home</a></li>
-        <li class = "navBar"><a href="aboutMe.html">About Me</a></li>
-        <li class = "navBar"><a href="portfolio.html">Portfolio</a></li>
-      </ul>
+        <ul>
+            <li class="navBar"><a href="index.html">Home</a></li>
+            <li class="navBar"><a href="aboutMe.html">About Me</a></li>
+            <li class="navBar"><a href="portfolio.html">Portfolio</a></li>
+        </ul>
     </nav>
-
     <main>
-      <h1>AUV</h1>
-      <video class = "portfolioImg" width="180" height="320" autoplay muted loop alt = "A video of an undedrwater vehicle adjusting its position in the water">
-        <source src="personal_web_img/AUV.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-      </video>
-      <p>In this project, I worked with my peers to use Python to enable the underwater vehicle shown in the video to move autonomously by incorporating ideas such as PID control and linear algebra.</p>
+        <h1>Autonomous Underwater Vehicle</h1>
+        <div>
+            <div>
+                <video class="portfolioImg" width="180" height="320" autoplay muted loop
+                alt="A video of an undedrwater vehicle adjusting its position in the water">
+                <source src="personal_web_img/AUV.mp4" type="video/mp4"> Your browser does not support the video tag.
+                </video>
+            </div>
+            <div>
+                <p>
+                    In this project, I worked with my peers to explore and control remotely 
+                    operated underwater vehicles. Our work included hands-on programming in Python 
+                    and C++, processing sensor data, developing basic control algorithms, 
+                    and executing mission-style tasks to understand how software, 
+                    hardware, and hydrodynamics integrate to achieve reliable underwater 
+                    operation.
+                </p>
+            </div>
+        </div>
 
-      <h1>Room Tracker</h1>
-      <img class = "portfolioImg" id = p_img2 src = "personal_web_img/room_tracker.png" alt = "A snippet of the program, which contains the floor plan of the building, the floor, and a dropdown menu for the user to choose the floor.">
-      <p>The project is being made using JAVAFX. It is intended to allow people to see the status of the bathroom and elevators in the building. If they clicked on those utilities, the website will tell them the amount of people using those utilities or the people in line waiting for their turn.</p>
+        <div class = "split">
+            <div>
+                <h2>
+                    Raspberry Pi
+                </h2>
+                
+                <img class="portfolioImg" id="p_img3" src="personal_web_img/Raspberry_Pi_4_Model_B.jpg"
+                    alt = "picutre of Rasberry Pi 4B">
 
-      <h1>AP CSA practice problems</h1>
-      <img class = "portfolioImg" id = "p_img3" src = "personal_web_img/CSAcode_pic.png" alt = "A picture of a public class name CSAClass written in JAVA. The public class contains one instance variable, two constructors, and two methods.">
-      <p>This <a href="https://github.com/TsaiYingL/CSA_hw.git">repository</a> contains multiple folders of JAVA files, which were made to practice for the AP exam. The image on the left is from the folder name 9_1 when our class was leaning about Inheritance.</p>
+                <br>
+                <br>
+                <br>
+                <p>
+                    During the course, we used Rasberry Pi 4B as out main computer.
+                    We learned how to connect it with Visual Studio Code using SSH, 
+                    assigning it to a static IP, and utilize it to run our AUV
+                </p>
+            </div>
+
+            <div>
+                <h2>
+                    BlueROV2
+                </h2>
+
+                <img class="portfolioImg" id="p_img3" src="personal_web_img/bluerov2.png"
+                    alt = "picutre of a blue ROV">
+
+                <p>
+                    The BlueROV2 is a modular, remotely operated underwater 
+                    vehicle (ROV) developed by Blue Robotics, designed for 
+                    accessible and versatile underwater exploration. In this 
+                    course, we explored the BlueROV2’s mechanical structure, 
+                    control architecture, and programming interface while 
+                    learning the principles of buoyancy, propulsion, and 
+                    underwater navigation.
+                </p>
+            </div>
+        </div>
+
+        <h2 class = "alignLeft">
+            Math and Physics
+        </h2>
+        <div class = "unevenSplit">
+            <div class = "left-column alignLeft">
+                <img class="portfolioImg" id="p_img3" src="personal_web_img/physics.jpg"
+                    alt = "picutre of force diagram for blue ROV">
+            </div>
+            <div class = "right-column">
+                <p class = "alignLeft">
+                    To fully operate the BlueROV2, we incorporated concepts from linear algebra, 
+                    calculus, and underwater physics to model and calculate the vehicle’s 
+                    trajectory and motion dynamics. These principles allowed us to better 
+                    understand how forces such as buoyancy, drag, and thrust influence the 
+                    ROV’s movement, enabling more precise control and navigation during 
+                    underwater operations. The mathematical concepts we studied were later 
+                    implemented in our code using NumPy, allowing us to perform matrix 
+                    calculations and simulate the physical behavior of the vehicle 
+                    programmatically.
+                </p>
+            </div>
+
+        </div>
+        <h1>AP CSA practice problems</h1>
+        <img class="portfolioImg" id="p_img3" src="personal_web_img/CSAcode_pic.png"
+            alt="A picture of a public class name CSAClass written in JAVA. The public class contains one instance variable, two constructors, and two methods.">
+        <p>This <a href="https://github.com/TsaiYingL/CSA_hw.git">repository</a> contains multiple folders of JAVA
+            files, which were made to practice for the AP exam. The image on the left is from the folder name 9_1 when
+            our class was leaning about Inheritance.</p>
     </main>
-  </body>
-  
+</body>
+
 </html>

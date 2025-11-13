@@ -60,12 +60,29 @@ p{
   display: inline;
 }
 
-.skills {
+.alignLeft {
+  text-align: left;
+}
+
+.split {
   display: flex;
 }
 
-.skills > div {
+.split > div {
   width: 50%;
+}
+
+.unevenSplit {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-column {
+  flex: 1;
+}
+
+.right-column {
+  flex: 2;
 }
 
 .schoolInfo {
@@ -76,7 +93,7 @@ p{
   border-radius:5px;
   margin: 10px;
   border: 3px dotted #261C15;
-  max-width: 30%;
+  max-width: 60%;
 }
 
 .pdf {
