@@ -85,6 +85,10 @@ p{
   flex: 2;
 }
 
+.subTitle {
+  color: #40798C;
+}
+
 .schoolInfo {
   background-color: #EEF0F2;
 }
@@ -101,6 +105,15 @@ p{
   aspect-ratio: 4 / 3;
 }
 
+.unevenImg {
+  border-radius:5px;
+  margin:10px;
+  border: 3px dotted #261C15;
+  width: 90%;
+  height: 80%;
+  object-fit: fill;
+}
+
 #homeImg {
   border-radius:5px;
   margin: 10px;
@@ -110,4 +123,11 @@ p{
 #homeIntro{
   font-family: "Helvetica", Sans-serif;
   font-size:25px;
+}
+
+#skill{
+  list-style-type: disc;
+  margin-left: 40px;
+  line-height: 1.6;
+  font-size: 16px;
 }

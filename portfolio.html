@@ -28,12 +28,8 @@
             </div>
             <div>
                 <p>
-                    In this project, I worked with my peers to explore and control remotely 
-                    operated underwater vehicles. Our work included hands-on programming in Python 
-                    and C++, processing sensor data, developing basic control algorithms, 
-                    and executing mission-style tasks to understand how software, 
-                    hardware, and hydrodynamics integrate to achieve reliable underwater 
-                    operation.
+                    In this project, I worked with my peers to explore and control remotely operated underwater vehicles. Our work included hands-on programming in Python and C++, processing sensor data, developing basic control algorithms, and executing mission-style tasks to understand how software, 
+                    hardware, and hydrodynamics integrate to achieve reliable underwater operation.
                 </p>
             </div>
         </div>
@@ -51,12 +47,10 @@
                 <br>
                 <br>
                 <p>
-                    During the course, we used Rasberry Pi 4B as out main computer.
-                    We learned how to connect it with Visual Studio Code using SSH, 
-                    assigning it to a static IP, and utilize it to run our AUV
+                    During the course, we used Rasberry Pi 4B as out main computer. We learned how to connect it with Visual Studio Code using SSH, assigning it to a static IP, and utilize it to run our AUV
                 </p>
             </div>
-
+            
             <div>
                 <h2>
                     BlueROV2
@@ -82,30 +76,124 @@
         </h2>
         <div class = "unevenSplit">
             <div class = "left-column alignLeft">
-                <img class="portfolioImg" id="p_img3" src="personal_web_img/physics.jpg"
+                <img class="portfolioImg" src="personal_web_img/physics.jpg"
                     alt = "picutre of force diagram for blue ROV">
             </div>
             <div class = "right-column">
                 <p class = "alignLeft">
-                    To fully operate the BlueROV2, we incorporated concepts from linear algebra, 
-                    calculus, and underwater physics to model and calculate the vehicle’s 
-                    trajectory and motion dynamics. These principles allowed us to better 
-                    understand how forces such as buoyancy, drag, and thrust influence the 
-                    ROV’s movement, enabling more precise control and navigation during 
-                    underwater operations. The mathematical concepts we studied were later 
-                    implemented in our code using NumPy, allowing us to perform matrix 
-                    calculations and simulate the physical behavior of the vehicle 
-                    programmatically.
+                    To fully operate the BlueROV2, we incorporated concepts from linear algebra, calculus, and underwater physics to model and calculate the vehicle’s trajectory and motion dynamics. These principles allowed us to better understand how forces such as buoyancy, drag, and thrust influence the ROV’s movement, enabling more precise control and navigation during underwater operations. The mathematical concepts we studied were later implemented in our code using NumPy, allowing us to perform matrix calculations and simulate the physical behavior of the vehicle programmatically.
                 </p>
             </div>
 
         </div>
-        <h1>AP CSA practice problems</h1>
-        <img class="portfolioImg" id="p_img3" src="personal_web_img/CSAcode_pic.png"
-            alt="A picture of a public class name CSAClass written in JAVA. The public class contains one instance variable, two constructors, and two methods.">
-        <p>This <a href="https://github.com/TsaiYingL/CSA_hw.git">repository</a> contains multiple folders of JAVA
-            files, which were made to practice for the AP exam. The image on the left is from the folder name 9_1 when
-            our class was leaning about Inheritance.</p>
+
+        
+        <h1>ECE 1100 Discovery Project: Computer Vision</h1>
+        <p>
+            The initial goal of this project is to develop an automated turret capable of launching ping-pong balls when it detects an AprilTag. Achieving this will require the integration of computer vision techniques for April Tag recognition, embedded systems for real-time control, and electromechanical components such as DC motors for both actuation and firing mechanisms.
+        </p>
+
+        <h1 class = "subTitle">
+            ECE Skilles Gained
+        </h1>
+        <ul id = "skill">
+            <li>AprilTag detection with OpenCV</li>
+            <li>Used pupil_apriltags library</li>
+            <li>Debugging with Jupyter Notebook</li>
+            <li>Version control with Git</li>
+            <li>Raspberry Pi embedded setup</li>
+            <li>3D printing</li>
+        </ul>
+
+        <h1 class = "subTitle">
+            Project Progress
+        </h1>
+        <div class = "unevenSplit">
+            <div class = "left-column alignLeft">
+                <h2>
+                    <a href = "https://github.com/TsaiYingL/turret" class = "subTitle">Computer Vision</a>
+                </h2>
+                <img class = "unevenImg" src="personal_web_img/aprilTagDetection.png"
+                    alt = "computer vision pic">
+            </div>
+            <div class = "right-column">
+                <br>
+                <br>
+                <p class = "alignLeft">
+                    During this part of the project, I focused on testing and validating the computer vision subsystem. This included setting up an AprilTag detection environment, experimenting with camera configurations, and integrating detection algorithms into an embedded workflow. The following sections will detail the libraries and tools incorporated into the computer vision code and how they contributed to system functionality, specifically OpenCV and pupil_apriltags. In addition to these software components, I used Git for version control to maintain organized development progress, track revisions, and manage different testing branches. I also used Jupyter Notebook to test portions of the code in isolation. This allows me to visualize detection outputs and debug my code efficiently.
+                </p>
+            </div>
+
+        </div>
+        
+        <div class = "split">
+            <div>
+                <h2>
+                    pupil_apriltags
+                </h2>
+                
+                <img class="portfolioImg" src="personal_web_img/python_apriltag_result02.webp"
+                    alt = "picutre of multiple april tags">
+            </div>
+
+            <div>
+                <h2>
+                    cv2 (OpenCV)
+                </h2>
+
+                <img class="portfolioImg" src="personal_web_img/openCV.png"
+                    alt = "openCV logo">
+            </div>
+        </div>
+
+        <div class = "split">
+            <div>
+                <p>
+                    AprilTags are high-contrast visual markers designed for reliable detection and pose estimation, commonly used in robotics and computer vision applications. They function similarly to QR codes but are optimized for fast, robust identification and accurate determination of their 3D position and orientation.
+                    <br>
+                    <br>   
+                    The pupil_apriltags library served as the core AprilTag detection engine in the project. This library served as the core AprilTag detection engine in the project. It provides fast and reliable tag recognition by processing image frames to identify tag families, decode tag IDs, and return pose estimations. Using pupil_apriltags, I was able to obtain accurate spatial information about the tag’s position and orientation, which is essential for guiding the turret’s aiming algorithms.
+                </p>
+            </div>
+
+            <div>
+                <p>
+                    OpenCV was used as the primary tool for handling image and video operations. It allowed me to interface with the camera, capture real-time frames, preprocess images through resizing or grayscale conversion, and visualize detection outputs. Additionally, OpenCV’s flexibility made it straightforward to integrate the detection pipeline into the embedded workflow, enabling efficient frame processing and debugging through visual overlays.
+                </p>
+            </div>
+        </div>
+
+        <h2 class = "alignLeft">
+                3D Model
+        </h2>
+        <div class = "unevenSplit">
+            <div class = "left-column">
+                <img class="unevenImg" src="personal_web_img/turretModel(2).png" alt="assembled turret model">
+            </div>
+            
+            <div class = "right-column">
+                <img class="unevenImg" src="personal_web_img/turretModel(1).png" alt="assembled turret model">
+            </div>
+
+            <p>
+                To assemble the components together, I found this turret stl file online and tried to print it out in HIVE. This gave me the opportunity to explore the maker space.
+            </p>
+        </div>
+        
+        <!--<img class="portfolioImg" src="personal_web_img/CSAcode_pic.png"
+            alt="A picture of a public class name CSAClass written in JAVA. 
+            The public class contains one instance variable, two constructors, 
+            and two methods.">-->
+
+        <h1 class = "subTitle">Project Successes and Failures</h1>
+        <p>
+            Throughout the project, one of my major successes was getting the code to work as intended. After several rounds of testing and troubleshooting, I was able to develop a functioning software component that performed reliably and demonstrated the core logic behind the turret system. However, the largest roadblock I encountered involved the hardware setup—specifically the Raspberry Pi. Setting it up proved to be much more challenging and time-consuming than expected, and because of these difficulties, I wasn’t able to fully assemble the physical turret before the end of the course. Although this was a setback, it’s something I plan to continue working on beyond the course timeline.
+        </p>
+
+        <h1 class = "subTitle">Final Thoughts</h1>
+        <p>
+            I genuinely enjoyed working on this project, especially the process of exploring computer vision and seeing the detection system come to life through experimentation. Even though I faced challenges with the hardware setup, the progress I made on the software side was motivating and extremely rewarding. This project sparked a stronger interest in embedded systems and robotics, and I definitely plan to continue developing the turret during winter break—especially revisiting the Raspberry Pi setup and completing the full physical build.
+        </p>
     </main>
 </body>
 
