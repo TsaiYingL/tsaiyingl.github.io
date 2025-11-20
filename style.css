@@ -110,8 +110,9 @@ p{
   margin:10px;
   border: 3px dotted #261C15;
   width: 90%;
-  height: 80%;
-  object-fit: fill;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 #homeImg {
