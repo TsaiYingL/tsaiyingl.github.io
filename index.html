@@ -1,35 +1,103 @@
 <!DOCTYPE html>
-<html>
-  <link rel="stylesheet" href="/style.css"/>
-  <head>
-    <title>Tsai's personal web</title>
-  </head>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tsai Ying Lin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  <body>
-  
-    <header>
-      <h1>Welcome!</h1>
-    </header>
-  
-    <nav>
-      <ul id = "navBar">
-        <li class = "navBar"><a href="index.html">Home</a></li>
-        <li class = "navBar"><a href="aboutMe.html">About Me</a></li>
-        <li class = "navBar"><a href="portfolio.html">Portfolio</a></li>
-      </ul>
+  <!-- NAV -->
+  <header class="nav">
+    <a href="#top" class="nav__logo">Tsai Ying Lin</a>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav__links" id="navLinks">
+      <a href="#aboutMe">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Project</a>
+      <a href="#contact">Contact</a>
     </nav>
-  
-    <main>
-      <img id = "homeImg" src = personal_web_img/Tsai.jpg alt = "A picture of Tsai turned side ways with a sweater under her coat. Her right hand is in her pocket and left hand is hold a black cap.">
-      <p id = "homeIntro">
-        Hello! I am a passionate second year Computer Engineering major at Georgia
-        Tech interested in embedded systems and robotics.
-        <br>
-        <br>
-        This website is going to showcase my experience and projects.
-      </p>
-    </main>
-    
-  </body>
+  </header>
 
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero__stack" id="heroStack" aria-label="Portfolio">
+      <span class="row row--accent">PORTFOLIO</span>
+      <span class="row">PORTFOLIO</span>
+      <span class="row">PORTFOLIO</span>
+      <span class="row">PORTFOLIO</span>
+    </div>
+    <a href="#work" class="hero__scroll">
+      <span>Scroll</span>
+      <svg width="14" height="20" viewBox="0 0 14 20" fill="none">
+        <path d="M7 0V19M7 19L1 13M7 19L13 13" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+    </a>
+  </section>
+
+  <section class="context intro" id="intro">
+    <h1>Hello!<br>I'm Tsai Ying Lin</h1>
+    <p>
+      A Computer Engineer with career interests in embedded systems and robotics
+    </p>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="context aboutMe" id="aboutMe">
+    <h1>More About Me...</h1>
+    <p>
+      I am a junior at the Georgia Institute of Technology, having transferred from SUNY Stony Brook where I began my studies in computer science and joined the WISE Honors program. While Stony Brook gave me a strong foundation in software and theory, I discovered that I was equally drawn to working with hardware, which motivated my move to Georgia Tech
+      <br><br>
+      At my new school, I joined the VIP program called Neckton, where I focused on the software side of marine robotics. Through this experience, I gained exposure to ROS2, collaborative coding practices, and the challenges of building reliable systems for underwater environments
+      <br><br>
+      In the mean time, I became involved with Georgia Tech’s Marine Robotics Group, where my role leaned more toward electrical engineering. I learned practical skills such as soldering, wiring, and integrating sensors with embedded systems. This hands‑on work gave me a deeper appreciation for how hardware and software must come together seamlessly in robotics
+      <br><br>
+      Moving forward, I look foward to collaborate with like-minded people and eager to contribute my skills and experiences to innovative projects through both research and internships.
+    </p>
+  </section>
+
+  <!-- WORK -->
+  <section class="context work" id="work">
+    <div class="section-head">
+      <h2>Selected Work</h2>
+      <span class="section-head__count">03</span>
+    </div>
+    <div class="work__list">
+      <a class="work__item" href="#">
+        <span class="work__title">Project One</span>
+        <span class="work__tag">Brand · Web</span>
+      </a>
+      <a class="work__item" href="#">
+        <span class="work__title">Project Two</span>
+        <span class="work__tag">Product Design</span>
+      </a>
+      <a class="work__item" href="#">
+        <span class="work__title">Project Three</span>
+        <span class="work__tag">Development</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT / FOOTER -->
+  <footer class="footer" id="contact">
+    <a href="mailto:you@example.com" class="footer__email">you@example.com</a>
+    <div class="footer__meta">
+      <span>© <span id="year"></span> Your Name</span>
+      <div class="footer__social">
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
