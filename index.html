@@ -51,7 +51,10 @@
 
   <!-- ABOUT -->
   <section class="context aboutMe" id="aboutMe">
-    <h1>More About Me...</h1>
+    <div class="section-head">
+      <h1>MORE ABOUT ME</h1>
+      <span class="section-head__count">02</span>
+    </div>
     <p>
       I am a junior at the Georgia Institute of Technology, having transferred from SUNY Stony Brook where I began my studies in computer science and joined the WISE Honors program. While Stony Brook gave me a strong foundation in software and theory, I discovered that I was equally drawn to working with hardware, which motivated my move to Georgia Tech
       <br><br>
@@ -59,44 +62,143 @@
       <br><br>
       In the mean time, I became involved with Georgia Tech’s Marine Robotics Group, where my role leaned more toward electrical engineering. I learned practical skills such as soldering, wiring, and integrating sensors with embedded systems. This hands‑on work gave me a deeper appreciation for how hardware and software must come together seamlessly in robotics
       <br><br>
-      Moving forward, I look foward to collaborate with like-minded people and eager to contribute my skills and experiences to innovative projects through both research and internships.
+      Moving forward, I eager to collaborate with like-minded people and contribute my skills and experiences through both research and internships
     </p>
   </section>
 
   <!-- WORK -->
   <section class="context work" id="work">
     <div class="section-head">
-      <h2>Selected Work</h2>
+      <h1>PROJECTS I WORKED ON...</h1>
       <span class="section-head__count">03</span>
     </div>
-    <div class="work__list">
-      <a class="work__item" href="#">
-        <span class="work__title">Project One</span>
-        <span class="work__tag">Brand · Web</span>
-      </a>
-      <a class="work__item" href="#">
-        <span class="work__title">Project Two</span>
-        <span class="work__tag">Product Design</span>
-      </a>
-      <a class="work__item" href="#">
-        <span class="work__title">Project Three</span>
-        <span class="work__tag">Development</span>
-      </a>
+    <div class="project-grid">
+      <button type="button" class="project-card" data-year="Summer 2024" data-role="MIT Beaver Works Summer Institute">
+        <h3 class="project-card__title">Autonomous Underwater Vehicle Challenge</h3>
+        <p class="project-card__desc">Four-week MIT program building and programming an AUV from the ground up — vehicle control, sensor integration, and image processing — culminating in a fully autonomous run through a simulated underwater obstacle course.</p>
+
+        <p class="write-up">
+          Selective four-week in-person program at MIT following an online prerequisite course. Weeks were structured around progressively harder autonomy: setting up a Linux/C++ dev environment, writing single-vehicle sensor-driven behaviors, then moving into multi-vehicle coordination for an individual challenge problem. The program closed with a final challenge where the AUV had to autonomously navigate a simulated underwater obstacle course using only onboard sensor feedback — no human piloting.
+        </p>
+
+        <div class="project-card__tags">
+          <span>Python</span>
+          <span>C++</span>
+          <span>Linux</span>
+          <span>Sensor Fusion</span>
+          <span>Autonomy</span>
+        </div>
+      </button>
+
+      <button type="button" class="project-card" data-year="2025" data-role="Designer & Developer">
+        <h3 class="project-card__title">Project Two</h3>
+        <p class="project-card__desc">A short description of what this project does, the problem it solves, and your role in building it.</p>
+
+        <p class="write-up">
+          Add a longer write-up here — what problem this solved, key decisions you made, challenges you ran into, and what you'd do differently next time.
+        </p>
+
+        <div class="project-card__tags">
+          <span>React</span>
+          <span>Figma</span>
+          <span>UI/UX</span>
+        </div>
+      </button>
+
+      <button type="button" class="project-card" data-year="2025" data-role="Backend Developer">
+        <h3 class="project-card__title">Project Three</h3>
+        <p class="project-card__desc">A short description of what this project does, the problem it solves, and your role in building it.</p>
+
+        <p class="write-up">
+          Add a longer write-up here — what problem this solved, key decisions you made, challenges you ran into, and what you'd do differently next time.
+        </p>
+
+        <div class="project-card__tags">
+          <span>Python</span>
+          <span>API</span>
+          <span>SQL</span>
+        </div>
+      </button>
+
+      <button type="button" class="project-card" data-year="2024" data-role="iOS Developer">
+        <h3 class="project-card__title">Project Four</h3>
+        <p class="project-card__desc">A short description of what this project does, the problem it solves, and your role in building it.</p>
+
+        <p class="write-up">
+          Add a longer write-up here — what problem this solved, key decisions you made, challenges you ran into, and what you'd do differently next time.
+        </p>
+
+        <div class="project-card__tags">
+          <span>Swift</span>
+          <span>iOS</span>
+          <span>Firebase</span>
+        </div>
+      </button>
+
+      <button type="button" class="project-card" data-year="2024" data-role="Full-stack Developer">
+        <h3 class="project-card__title">Project Five</h3>
+        <p class="project-card__desc">A short description of what this project does, the problem it solves, and your role in building it.</p>
+
+        <p class="write-up">
+          Add a longer write-up here — what problem this solved, key decisions you made, challenges you ran into, and what you'd do differently next time.
+        </p>
+
+        <div class="project-card__tags">
+          <span>Node.js</span>
+          <span>Express</span>
+          <span>MongoDB</span>
+        </div>
+      </button>
+
+      <button type="button" class="project-card" data-year="2023" data-role="Engineer">
+        <h3 class="project-card__title">Project Six</h3>
+        <p class="project-card__desc">A short description of what this project does, the problem it solves, and your role in building it.</p>
+
+        <p class="write-up">
+          Add a longer write-up here — what problem this solved, key decisions you made, challenges you ran into, and what you'd do differently next time.
+        </p>
+
+        <div class="project-card__tags">
+          <span>C++</span>
+          <span>OpenGL</span>
+          <span>Physics</span>
+        </div>
+      </button>
     </div>
   </section>
 
   <!-- CONTACT / FOOTER -->
   <footer class="footer" id="contact">
-    <a href="mailto:you@example.com" class="footer__email">you@example.com</a>
+    <a href="mailto:tlin414@gatehc.edu" class="footer__email">tlin414@gatehc.edu</a>
     <div class="footer__meta">
-      <span>© <span id="year"></span> Your Name</span>
+      <span>© <span id="year"></span> Tsai Ying Lin</span>
       <div class="footer__social">
         <a href="#">Instagram</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">GitHub</a>
+        <a href="https://www.linkedin.com/in/tsai-ying-lin">LinkedIn</a>
+        <a href="https://github.com/TsaiYingL">GitHub</a>
       </div>
     </div>
   </footer>
+
+  <!-- PROJECT MODAL -->
+  <div class="project-modal" id="projectModal" aria-hidden="true">
+    <div class="project-modal__backdrop" data-modal-close></div>
+    <div class="project-modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button type="button" class="project-modal__close" data-modal-close aria-label="Close">✕</button>
+      <span class="project-modal__eyebrow" id="modalMeta"></span>
+      <h3 class="project-modal__title" id="modalTitle"></h3>
+      <p class="project-modal__desc" id="modalDesc"></p>
+      <div class="project-modal__tags" id="modalTags"></div>
+
+      <button type="button" class="project-modal__toggle" id="modalToggle" aria-expanded="false" aria-controls="modalExtra">
+        <span id="modalToggleLabel">Show more</span>
+        <span class="project-modal__toggle-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="project-modal__extra" id="modalExtra">
+        <p id="modalDetail"></p>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

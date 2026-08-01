@@ -39,3 +39,81 @@ function isInView(element){
         (window.innerHeight - 150 || document.documentElement.clientHeight - 150)
     );
 }
+
+// ---------- Project Modal ----------
+const projectModal = document.getElementById('projectModal');
+const modalTitle = document.getElementById('modalTitle');
+const modalDesc = document.getElementById('modalDesc');
+const modalMeta = document.getElementById('modalMeta');
+const modalTags = document.getElementById('modalTags');
+const modalToggle = document.getElementById('modalToggle');
+const modalToggleLabel = document.getElementById('modalToggleLabel');
+const modalExtra = document.getElementById('modalExtra');
+const modalDetail = document.getElementById('modalDetail');
+const projectCards = document.querySelectorAll('.project-card');
+
+let lastFocusedCard = null;
+
+function collapseModalExtra() {
+  modalExtra.classList.remove('is-open');
+  modalToggle.setAttribute('aria-expanded', 'false');
+  modalToggleLabel.textContent = 'Show more';
+}
+
+function openProjectModal(card) {
+  const title = card.querySelector('.project-card__title')?.textContent ?? '';
+  const desc = card.querySelector('.project-card__desc')?.textContent ?? '';
+  const tags = card.querySelectorAll('.project-card__tags span');
+  const year = card.dataset.year ?? '';
+  const role = card.dataset.role ?? '';
+  const detail = card.querySelector('.write-up')?.textContent.trim() ?? '';
+
+  modalTitle.textContent = title;
+  modalDesc.textContent = desc;
+  modalMeta.textContent = [year, role].filter(Boolean).join(' · ');
+  modalDetail.textContent = detail;
+
+  modalTags.innerHTML = '';
+  tags.forEach(tag => {
+    const span = document.createElement('span');
+    span.textContent = tag.textContent;
+    modalTags.appendChild(span);
+  });
+
+  // hide the toggle entirely if a card has no extra detail to show
+  modalToggle.hidden = !detail;
+  collapseModalExtra();
+
+  lastFocusedCard = card;
+  projectModal.classList.add('is-open');
+  projectModal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  projectModal.querySelector('.project-modal__close').focus();
+}
+
+function closeProjectModal() {
+  projectModal.classList.remove('is-open');
+  projectModal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  if (lastFocusedCard) lastFocusedCard.focus();
+}
+
+projectCards.forEach(card => {
+  card.addEventListener('click', () => openProjectModal(card));
+});
+
+projectModal.querySelectorAll('[data-modal-close]').forEach(el => {
+  el.addEventListener('click', closeProjectModal);
+});
+
+modalToggle.addEventListener('click', () => {
+  const isOpen = modalExtra.classList.toggle('is-open');
+  modalToggle.setAttribute('aria-expanded', String(isOpen));
+  modalToggleLabel.textContent = isOpen ? 'Show less' : 'Show more';
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && projectModal.classList.contains('is-open')) {
+    closeProjectModal();
+  }
+});
