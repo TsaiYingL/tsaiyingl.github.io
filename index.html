@@ -73,7 +73,7 @@
       <span class="section-head__count">03</span>
     </div>
     <div class="project-grid">
-      <button type="button" class="project-card" data-year="Dec. 2022 ~ Dec. 2023" data-role="MIT Beaver Works Summer Institute">
+      <button type="button" class="project-card" data-year="DEC. 2022 ~ DEC. 2023" data-role="MIT Beaver Works Summer Institute">
         <h3 class="project-card__title">Autonomous Underwater Vehicle Challenge</h3>
         <p class="project-card__desc">Four-week MIT program building and programming an AUV from the ground up — vehicle control, sensor integration, and image processing — culminating in a fully autonomous run through a simulated underwater obstacle course</p>
 
@@ -94,7 +94,7 @@
         </div>
       </button>
 
-      <button type="button" class="project-card" data-year="Aug. 2025 ~ Present" data-role="Designer & Developer">
+      <button type="button" class="project-card" data-year="AUG. 2025 ~ PRESENT">
         <h3 class="project-card__title">ECE 1100 Discovery Project: Computer Vision</h3>
         <p class="project-card__desc">
           An automated turret that detects AprilTags and fires ping-pong balls in response — combining computer vision, embedded control, and electromechanical actuation into one system
@@ -114,33 +114,41 @@
         </div>
       </button>
 
-      <button type="button" class="project-card" data-year="2025" data-role="Backend Developer">
-        <h3 class="project-card__title">Project Three</h3>
-        <p class="project-card__desc">A short description of what this project does, the problem it solves, and your role in building it.</p>
+      <button type="button" class="project-card" data-year="MAY. 2026 ~ JUN. 2026">
+        <h3 class="project-card__title">Snake Game on ESP32</h3>
+        <p class="project-card__desc">
+          A hardware build of the classic Snake game — ESP32 microcontroller, OLED display, and a joystick for input, with all game logic running directly on the embedded board
+        </p>
 
         <p class="write-up">
-          Add a longer write-up here — what problem this solved, key decisions you made, challenges you ran into, and what you'd do differently next time.
+          Built a self-contained handheld version of Snake using an ESP32 as the main controller, an OLED screen for the display, and an analog joystick for directional input. I chose this hardware for its low cost and accessibility, since I don't own a 3D printer and wanted a build that stayed purely electronic rather than requiring custom enclosures or mechanical parts. Managed the project with PlatformIO and wrote the game logic in C++, implementing a doubly linked list to track the snake's body as a growing chain of coordinates, handling collision detection against the walls and the snake's own body, and spawning food at random positions on the grid. Mapped joystick input to direction changes while preventing the snake from reversing directly into itself, and used the OLED's frame buffer to redraw the grid each tick without flicker. Getting the timing right — polling the joystick often enough to feel responsive without redrawing the display so fast it slowed everything down — was the main balancing act. I was also intentional about splitting the code across separate files by function, which made debugging far more manageable by isolating issues to game logic, input handling, or display rendering. Currently the display is driven through Adafruit_GFX.h and Adafruit_SSD1306.h; a natural next step would be writing my own display driver to go deeper into how the OLED communication actually works.
         </p>
 
         <div class="project-card__tags">
-          <span>Python</span>
-          <span>API</span>
-          <span>SQL</span>
+          <span>ESP32</span>
+          <span>Analog Joystick (ADC)</span>
+          <span>PlatformIO</span>
+          <span>Adafruit_SSD1306</span>
+          <span>I2C</span>
+          <span>C++</span>
         </div>
       </button>
 
-      <button type="button" class="project-card" data-year="2024" data-role="iOS Developer">
-        <h3 class="project-card__title">Project Four</h3>
-        <p class="project-card__desc">A short description of what this project does, the problem it solves, and your role in building it.</p>
+      <button type="button" class="project-card" data-year="JUL. 2026 ~ PRESENT">
+        <h3 class="project-card__title">PCB Business Card</h3>
+        <p class="project-card__desc">
+          A PCB business card that plays Snake — an ATtiny1614 microcontroller drives a 5x5 WS2812 addressable LED grid for the display
+        </p>
 
         <p class="write-up">
-          Add a longer write-up here — what problem this solved, key decisions you made, challenges you ran into, and what you'd do differently next time.
+          Designed a fully custom PCB "name card" in KiCad that doubles as a playable game and a networking tool. An ATtiny1614 microcontroller runs the Snake game logic and drives a 5×5 grid of WS2812 addressable RGB LEDs — green for the snake body, red for the fruit — chained off a single GPIO pin using the WS2812 protocol's precise pulse-timing scheme. Power and programming both come through a single USB-C port: a CH340 USB-to-serial bridge on-board translates USB into the single-wire UPDI protocol the ATtiny1614 uses for flashing, so the same port that powers the card also reprograms it, no external programmer needed. Sourced every part (MCU, LED driver-less RGB LEDs, USB-C receptacle, bridge chip) for JLCPCB's PCBA assembly service, working through real distributor datasheets to verify pin configurations, timing specs, and footprint compatibility before committing to a layout. The trickiest parts were routing a compliant USB-C power-sink circuit (correct CC1/CC2 pull-down resistors)
         </p>
 
         <div class="project-card__tags">
-          <span>Swift</span>
-          <span>iOS</span>
-          <span>Firebase</span>
+          <span>KiCad</span>
+          <span>PCB Design</span>
+          <span>Firmware Development</span>
+          <span>C++</span>
         </div>
       </button>
     </div>
@@ -152,7 +160,6 @@
     <div class="footer__meta">
       <span>© <span id="year"></span> Tsai Ying Lin</span>
       <div class="footer__social">
-        <a href="#">Instagram</a>
         <a href="https://www.linkedin.com/in/tsai-ying-lin">LinkedIn</a>
         <a href="https://github.com/TsaiYingL">GitHub</a>
       </div>
