@@ -563,3 +563,14 @@ section{ padding:120px 40px; }
 
   .work__item{ flex-direction:column; align-items:flex-start; gap:8px; }
 }
+
+.project-modal__video{
+  margin-bottom:8px;
+}
+
+.project-modal__video video{
+  width:100%;
+  height:auto;
+  display:block;
+  border:1px solid var(--line);
+}

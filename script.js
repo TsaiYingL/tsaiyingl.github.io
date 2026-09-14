@@ -117,3 +117,64 @@ document.addEventListener('keydown', (e) => {
     closeProjectModal();
   }
 });
+
+function openProjectModal(card) {
+  const title = card.querySelector('.project-card__title')?.textContent ?? '';
+  const desc = card.querySelector('.project-card__desc')?.textContent ?? '';
+  const tags = card.querySelectorAll('.project-card__tags span');
+  const year = card.dataset.year ?? '';
+  const role = card.dataset.role ?? '';
+  const videoSrc = card.dataset.video ?? '';
+  const detail = card.querySelector('.write-up')?.textContent.trim() ?? '';
+
+  modalTitle.textContent = title;
+  modalDesc.textContent = desc;
+  modalMeta.textContent = [year, role].filter(Boolean).join(' · ');
+  modalDetail.textContent = detail;
+
+  // build the video only if this project has one
+  modalVideo.innerHTML = '';
+  if (videoSrc) {
+    const video = document.createElement('video');
+    video.width = 640;
+    video.height = 360;
+    video.controls = true;
+    video.preload = 'none'; // don't load until the extra section is opened
+
+    const source = document.createElement('source');
+    source.src = videoSrc;
+    source.type = 'video/mp4';
+    video.appendChild(source);
+    video.appendChild(document.createTextNode('Your browser does not support the video tag.'));
+
+    modalVideo.appendChild(video);
+  }
+
+  modalTags.innerHTML = '';
+  tags.forEach(tag => {
+    const span = document.createElement('span');
+    span.textContent = tag.textContent;
+    modalTags.appendChild(span);
+  });
+
+  // hide the toggle entirely if a card has no extra detail to show
+  modalToggle.hidden = !detail && !videoSrc;
+  collapseModalExtra();
+
+  lastFocusedCard = card;
+  projectModal.classList.add('is-open');
+  projectModal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  projectModal.querySelector('.project-modal__close').focus();
+}
+
+const modalVideo = document.getElementById('modalVideo');
+
+function closeProjectModal() {
+  projectModal.classList.remove('is-open');
+  projectModal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  const video = modalVideo.querySelector('video');
+  if (video) video.pause();
+  if (lastFocusedCard) lastFocusedCard.focus();
+}
